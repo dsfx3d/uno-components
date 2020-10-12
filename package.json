@@ -1,0 +1,31 @@
+{
+  "name": "uno-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "yarn workspaces run lint",
+    "lint:style": "yarn workspaces run lint:style",
+    "lint:fix": "yarn workspaces run lint:fix"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": ">=4",
+    "lint-staged": ">=10"
+  },
+  "lint-staged": {
+    "**/src/*.(ts|tsx|js)": "yarn lint",
+    "*.css": "yarn lint:style"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

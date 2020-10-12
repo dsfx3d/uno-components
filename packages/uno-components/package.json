@@ -1,0 +1,59 @@
+{
+  "name": "uno-components",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/uno-components/uno-components.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "lint": "eslint src/**/*{.ts,.tsx} --max-warnings=0",
+    "lint:style": "stylelint **/*.css",
+    "lint:fix": "eslint src/**/*{.ts,.tsx} --max-warnings=0 --fix",
+    "start-storybook": "start-storybook -p 6006 -s dist",
+    "build-storybook": "build-storybook",
+    "storybook": "concurrently \"npm:start\" \"npm:start-storybook\""
+  },
+  "dependencies": {
+    "@stencil/core": "^2.0.1",
+    "tailwindcss": "^1.8.13"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@stencil/postcss": "^1.0.1",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/html": "^6.0.26",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "autoprefixer": "9.8.x",
+    "babel-loader": "^8.1.0",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "react-is": "^16.13.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "^4.0.3"
+  }
+}

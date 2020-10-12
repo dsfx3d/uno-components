@@ -1,0 +1,8 @@
+.button {
+  @apply px-4 py-2 bg-black text-white border-2;
+  @apply box-border;
+
+  &.outlined {
+    @apply border-black bg-transparent text-black;
+  }
+}
